@@ -1,0 +1,83 @@
+/* Ini adalah deklarasi warna yang digunakan */
+
+:root {
+    --primary: #3D8D7A;
+    --secondary: #B3D8A8;
+    --third: #FBFFE4;
+    --fourth: #A3D1C6;
+    --dark: #000000;
+}
+
+body{
+    font-family: 'Quicksand', sans-serif;
+}
+
+nav {
+    background:var(--primary);
+    padding: 5px;
+    position: sticky;
+    top: 0;
+  }
+
+  nav ul {
+    display: flex;
+    gap: 6rem;
+    padding-inline: 4rem;
+  }
+
+  nav li {
+    list-style: none;
+  }
+
+  nav a {
+    font: 400 18px sans-serif;
+    text-decoration: none;
+    color: white;
+  }
+
+  nav a:hover {
+    font-weight: bold;
+    color:var(--secondary);
+  }
+
+main {
+  padding: 20px;
+ 
+  display: flex;
+  gap: 1.5rem;
+}
+ 
+#content {
+  flex: 5;
+ 
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem 2rem;
+}
+ 
+aside {
+  flex: 1;
+}
+ 
+header {
+  display: inline;
+}
+ 
+/* Perangkat dengan lebar layar 1200px dan di bawahnya */
+@media screen and (max-width: 1200px) {
+  main {
+    flex-flow: column nowrap;
+  }
+  main aside {
+    align-self: center;
+  }
+}
+/* Perangkat dengan lebar layar 768px dan di bawahnya */
+@media screen and (max-width: 768px) {
+  nav ul {
+    justify-content: center;
+  }
+  main aside {
+    align-self: stretch;
+  }
+}
