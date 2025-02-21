@@ -1,9 +1,9 @@
 /* ========== VARIABEL WARNA ========== */
 :root {
-  --primary: #3D8D7A;
-  --secondary: #B3D8A8;
-  --third: #FBFFE4;
-  --fourth: #A3D1C6;
+  --primary: #3d8d7a;
+  --secondary: #b3d8a8;
+  --third: #fbffe4;
+  --fourth: #a3d1c6;
   --dark: #000000;
 }
 
@@ -24,122 +24,118 @@ body {
 }
 
 /* ========== NAVIGASI ========== */
-nav {
+.jumbotron {
+  font-size: 20px;
+  padding: 60px;
+  text-align: center;
+  color: white;
+  margin-top: 80px; /* Memberi jarak agar tidak tertutup navbar */
+}
+
+
+.navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background: var(--primary);
+  background: linear-gradient(135deg, var(--primary), var(--secondary)); /* Efek gradasi */
   z-index: 1000;
   display: flex;
   justify-content: space-between;
-  padding: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  padding: 15px 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Shadow lebih tegas */
+  border-bottom: 3px solid var(--third); /* Menambah border bawah */
 }
 
-nav ul {
+.container {
   display: flex;
-  justify-content: center;
-  gap: 2rem;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
   list-style: none;
+  gap: 1.5rem;
 }
 
-nav a {
+.nav-links a {
   font-size: 18px;
+  font-weight: bold;
   text-decoration: none;
-  color: white;
-  transition: color 0.3s;
+  color: var(--third);
+  transition: transform 0.4s ease-in-out;
+  padding: 8px 12px;
+  border-radius: 500px;
+  display: inline-block; 
 }
 
-nav a:hover {
-  font-weight: bold;
-  color: var(--secondary);
+.nav-links a:hover {
+  transform: scale(1.2);
+  color: rgb(255, 255, 255);
 }
+
 
 /* ========== TATA LETAK KONTEN ========== */
 main {
-  display: flex;
-  flex: 1;
-  gap: 2rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
   padding: 80px 20px 20px;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
 }
 
 #content {
-  flex: 2;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1rem;
 }
 
 aside {
-  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* ========== KARTU PROFILE ========== */
+/* ======== KARTU ARTIKEL ======== */
 .card {
   background: var(--third);
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s, box-shadow 0.3s;
   overflow: hidden;
-  max-width: 500px;
   width: 100%;
+  max-width: 900px; 
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transform: translateY(-6px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
 }
 
-.card p{
-  padding-top: 20px;
+.card img {
+  width: 100%; 
+  max-width: 550px; 
+  display: block;
+  margin: 0 auto 15px;
+  border: 5px solid var(--primary); 
+  border-radius: 50px;
 }
 
 .card h2 {
   background: var(--primary);
   color: white;
-  padding: 12px;
+  padding: 14px;
   text-align: center;
-  font-size: 20px;
-  font-weight: bold;
-  width: 100%;
+  font-size: 22px;
   border-radius: 8px;
-  margin-bottom: 15px;
-}
-
-.card h3 {
-  text-align: center;
-  margin: 10px 0;
-  font-size: 18px;
-  font-weight: bold;
-  color: var(--dark);
-}
-
-.card table {
-  width: 100%;
-  margin-top: 10px;
-}
-
-.card th, .card td {
-  text-align: left;
-  font-size: 16px;
-  padding: 5px 0;
-}
-
-.card img {
-  display: block;
-  margin: 0 auto;
-  border: 4px solid var(--primary);
-  border-radius: 10px;
-  padding: 5px;
-  background: white;
+  margin-bottom: 20px;
 }
 
 /* ========== PROFIL GAMBAR ========== */
@@ -178,22 +174,21 @@ aside {
   color: #333;
 }
 .instagram:hover {
-  color: #E4405F;
+  color: #e4405f;
 }
 
-/* ========== RESPONSIVE DESIGN ========== */
-@media screen and (max-width: 768px) {
+/* ======== RESPONSIVE DESIGN ======== */
+@media screen and (max-width: 1024px) {
   main {
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: 1fr; /* Satu kolom */
   }
-  
-  .card {
-    width: 90%;
+
+  #content {
+    grid-template-columns: 1fr; /* Artikel full width */
   }
-  
-  .card h2 {
-    font-size: 18px;
+
+  aside {
+    align-items: stretch;
   }
 }
 
@@ -212,7 +207,7 @@ footer {
   color: white;
 }
 
-.dark-mode nav {
+.dark-mode .navbar {
   background-color: #333;
 }
 
@@ -227,20 +222,21 @@ footer {
 
 /* ========== TOGGLE MODE ========== */
 .toggle-mode {
-  margin-left: 20px;
-  padding: 8px 12px;
+  padding: 10px 15px;
   cursor: pointer;
-  background:var(--dark);
+  background: var(--dark);
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   font-size: 14px;
+  font-weight: bold;
   transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Menambah efek shadow */
 }
 
 .toggle-mode:hover {
   background: var(--secondary);
-  transform: scale(1.1);
+  transform: scale(1.15); /* Lebih besar saat hover */
+  color: var(--dark);
 }
-
 

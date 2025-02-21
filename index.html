@@ -12,17 +12,26 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Quicksand:wght@300..700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Quicksand:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
     <header>
-      <nav>
-        <ul>
-          <li><a href="#">Pendidikan</a></li>
-          <li><a href="#">Keahlian</a></li>
-          <li><a href="#">About Me</a></li>
+      <div class="jumbotron">
+        <h1>Front-End Developer</h1>
+        <p>
+          "Front-End Development berfokus pada tampilan dan interaksi pengguna
+          menggunakan HTML, CSS, dan JavaScript untuk menciptakan antarmuka yang
+          responsif dan menarik."
+        </p>
+      </div>
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li><a href="#pendidikan">Pendidikan</a></li>
+          <li><a href="#keahlian">Keahlian</a></li>
+          <li><a href="#aboutme">Tentang Saya</a></li>
+          <li><a href="#teknologi">Teknologi Front-End</a></li>
         </ul>
         <button class="toggle-mode" id="darkModeToggle">🌙</button>
       </nav>
@@ -30,39 +39,42 @@
     <main>
       <div id="content">
         <article id="pendidikan" class="card">
-          <header>
-            <h2>Pendidikan</h2>
-          </header>
+          <h2>Pendidikan</h2>
           <img
             src="assets/img/ub.jpeg"
             alt="Universitas Brawijaya"
             class="featured-image"
           />
           <p>
-            Saya adalah mahasiswa Teknologi Informasi di Universitas Brawijaya,
-            saat ini berada di semester 6.
+            Saya adalah mahasiswa semester 6 Teknologi Informasi di Universitas
+            Brawijaya. Dalam perjalanan akademik saya, saya telah mempelajari
+            berbagai aspek pengembangan perangkat lunak, dengan fokus utama pada
+            pengembangan Front-End. Pemahaman tentang HTML, CSS, dan JavaScript
+            menjadi dasar dalam membangun antarmuka yang menarik dan interaktif
+            bagi pengguna.
           </p>
         </article>
 
         <article id="keahlian" class="card">
-          <header>
-            <h2>Keahlian</h2>
-          </header>
+          <h2>Keahlian</h2>
           <img
             src="assets/img/css.png"
             alt="Keahlian dalam CSS"
             class="featured-image"
           />
           <p>
-            Saya memiliki keahlian dalam CSS, HTML, dan JavaScript, yang saya
-            gunakan dalam Tugas ini.
+            Saya memiliki keahlian dalam pengembangan web menggunakan HTML, CSS,
+            dan JavaScript. Dengan CSS, saya dapat menciptakan desain yang
+            responsif dan estetis, sementara JavaScript membantu saya
+            menghadirkan fitur dinamis dan interaktif. Saya juga terus
+            mengembangkan kemampuan saya dalam menggunakan framework seperti
+            React dan Tailwind CSS untuk meningkatkan efisiensi dalam membangun
+            UI/UX yang modern.
           </p>
         </article>
 
         <article id="aboutme" class="card">
-          <header>
-            <h2>About Me</h2>
-          </header>
+          <h2>Tentang Saya</h2>
           <img
             src="assets/img/aboutme.jpeg"
             alt="Tentang Saya"
@@ -70,21 +82,41 @@
           />
           <p>
             Saya bercita-cita menjadi seorang Full-Stack Developer dengan fokus
-            utama pada Front-End Development.
+            utama pada Front-End Development. Saya tertarik dalam menciptakan
+            pengalaman pengguna yang optimal melalui desain yang intuitif dan
+            fungsional. Selain itu, saya senang mengikuti perkembangan teknologi
+            web untuk terus meningkatkan keterampilan saya dalam membangun
+            antarmuka yang inovatif. Dunia pengembangan Front-End terus
+            berkembang dengan hadirnya berbagai teknologi seperti React, Vue,
+            dan Tailwind CSS. Framework ini memungkinkan pengembang untuk
+            membangun aplikasi web yang lebih cepat, efisien, dan ramah
+            pengguna. Dengan pendekatan komponen, pengelolaan UI menjadi lebih
+            fleksibel dan terstruktur, membantu dalam menciptakan pengalaman
+            pengguna yang lebih baik.
+          </p>
+        </article>
+        <article id="teknologi" class="card">
+          <h2>Teknologi Front-End</h2>
+          <img
+            src="assets/img/teknologi.jpeg"
+            alt="teknologi"
+            class="featured-image"
+          />
+          <p>
+            Dunia pengembangan Front-End terus berkembang dengan hadirnya
+            berbagai teknologi seperti React, Vue, dan Tailwind CSS. Framework
+            ini memungkinkan pengembang untuk membangun aplikasi web yang lebih
+            cepat, efisien, dan ramah pengguna. Dengan pendekatan komponen,
+            pengelolaan UI menjadi lebih fleksibel dan terstruktur, membantu
+            dalam menciptakan pengalaman pengguna yang lebih baik.
           </p>
         </article>
       </div>
       <aside>
         <article class="profile card">
-          <header>
-            <h2>Profile</h2>
-          </header>
+          <h2>Profil</h2>
           <figure class="profile-image">
-            <img
-              src="assets/img/prof.png"
-              alt="Foto Profil Pengembang"
-              loading="lazy"
-            />
+            <img src="assets/img/prof.png" alt="Foto Profil" loading="lazy" />
           </figure>
           <section>
             <h3>Detail Informasi</h3>
@@ -105,38 +137,31 @@
               </tbody>
             </table>
           </section>
-
-          <!-- Social Media Icons -->
           <div class="social-icons">
             <a
               href="https://www.linkedin.com/in/musyaffa-arwin-a99b94312/"
               target="_blank"
               class="icon linkedin"
-            >
-              <i class="fab fa-linkedin"></i>
-            </a>
+              ><i class="fab fa-linkedin"></i
+            ></a>
             <a
               href="https://github.com/Musyaffaa2"
               target="_blank"
               class="icon github"
-            >
-              <i class="fab fa-github"></i>
-            </a>
+              ><i class="fab fa-github"></i
+            ></a>
             <a
-              href="https://www.instagram.com/yaaffaaa_"
+              href="https://www.instagram.com/yaaffaaa_/"
               target="_blank"
               class="icon instagram"
-            >
-              <i class="fab fa-instagram"></i>
-            </a>
+              ><i class="fab fa-instagram"></i
+            ></a>
           </div>
         </article>
       </aside>
     </main>
     <footer>
-      <p>
-        Belajar Dasar Pemrograman Web &#169; 2025, Musyaffa Arwiin Cohort DBS Foundation CodingCamp
-      </p>
+      <p>&#169; 2025, Musyaffa Arwiin | DBS Foundation CodingCamp Cohort</p>
     </footer>
     <script src="/js/script.js"></script>
   </body>
