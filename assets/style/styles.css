@@ -45,6 +45,7 @@ body {
   gap: 1.5rem;
 }
 
+
 .nav-links a {
   font-size: 18px;
   font-weight: bold;
@@ -56,8 +57,7 @@ body {
 }
 
 .nav-links a:hover {
-  transform: scale(1.2);
-  color: white;
+  color: var(--fourth);
 }
 
 /* ========== JUMBOTRON DAN HEADER ========== */
