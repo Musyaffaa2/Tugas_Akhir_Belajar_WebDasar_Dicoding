@@ -1,102 +1,143 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Halaman Profile</title>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Halaman Profil</title>
     <link rel="stylesheet" href="assets/style/styles.css" />
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header>
-        <nav id="nav-menu">
-            <ul>
-              <li><a href="#pendidikan">Pendidikan</a></li>
-              <li><a href="#keahlian">Keahlian </a></li>
-              <li><a href="#aboutme">About Me</a></li>
-            </ul>
-          </nav>
+      <nav>
+        <ul>
+          <li><a href="#">Pendidikan</a></li>
+          <li><a href="#">Keahlian</a></li>
+          <li><a href="#">About Me</a></li>
+        </ul>
+        <button class="toggle-mode" id="darkModeToggle">🌙</button>
+      </nav>
     </header>
     <main>
-        <div id="content">
-            <article id="pendidikan" class="card">
-              <h2>Pendidikan</h2>
-              <img src="assets/img/ub.jpeg" alt="pendidikan" class="featured-image" />
-              <p>
-                Saya adalah seorang mahasiswa jurusan Teknologi Informasi di Universitas Brawijaya, 
-                Pada saat ini dibuat saya sedang menempuh semester 6. Saya memiliki minat yang 
-                sangat besar terhadap teknologi informasi dan ingin mengembangkan diri saya.
-              </p>
-            </article>
-    
-            <article id="keahlian" class="card">
-              <h2>Keahlian</h2>
-              <img src="assets/img/css.png" alt="keahlian" class="featured-image" />
-              <p>
-                Keahlian saya menggunakan CSS pada masa perkuliahan saya aplikasikan
-                untuk menyelesaikan tugas -tugas yang diberikan. Selain itu 
-                Website ini dibuat menggunakan HTML, CSS, dan JavaScript. 
-              </p>
-            </article>
-    
-            <article id="aboutme" class="card">
-              <h2>About Me</h2>
-              <img src="assets/img/aboutme.jpeg" alt="keahlian" class="featured-image" />
-              <p>
-                Saya memiliki minat yang sangat besar terhadap teknologi informasi dan ingin menjadi 
-                seorang developer yang handal. Khususnya dibidang Front-End, Namun saya juga berkeinginan
-                untuk menjadi Full-Stack Developer di masa depan. 
-              </p>
-    </main>
+      <div id="content">
+        <article id="pendidikan" class="card">
+          <header>
+            <h2>Pendidikan</h2>
+          </header>
+          <img
+            src="assets/img/ub.jpeg"
+            alt="Universitas Brawijaya"
+            class="featured-image"
+          />
+          <p>
+            Saya adalah mahasiswa Teknologi Informasi di Universitas Brawijaya,
+            saat ini berada di semester 6.
+          </p>
+        </article>
 
-    <footer>
-            <p>Belajar Dasar Pemrograman Web &#169; 2025, DBS Foundation CodingCamp</p>
-    </footer>
-    
-     <aside>
+        <article id="keahlian" class="card">
+          <header>
+            <h2>Keahlian</h2>
+          </header>
+          <img
+            src="assets/img/css.png"
+            alt="Keahlian dalam CSS"
+            class="featured-image"
+          />
+          <p>
+            Saya memiliki keahlian dalam CSS, HTML, dan JavaScript, yang saya
+            gunakan dalam Tugas ini.
+          </p>
+        </article>
+
+        <article id="aboutme" class="card">
+          <header>
+            <h2>About Me</h2>
+          </header>
+          <img
+            src="assets/img/aboutme.jpeg"
+            alt="Tentang Saya"
+            class="featured-image"
+          />
+          <p>
+            Saya bercita-cita menjadi seorang Full-Stack Developer dengan fokus
+            utama pada Front-End Development.
+          </p>
+        </article>
+      </div>
+      <aside>
         <article class="profile card">
           <header>
-            <h2>Kota Bandung</h2>
-            <p>Kota Kembang Paris van Java</p>
-            <figure>
-              <img src="assets/image/bandung-badge.png" />
-              <figcaption>Lambang</figcaption>
-            </figure>
+            <h2>Profile</h2>
           </header>
-
+          <figure class="profile-image">
+            <img
+              src="assets/img/prof.png"
+              alt="Foto Profil Pengembang"
+              loading="lazy"
+            />
+          </figure>
           <section>
-            <h3>Informasi Lainnya</h3>
-
+            <h3>Detail Informasi</h3>
             <table>
-              <tr>
-                <th>Negara</th>
-                <td>Indonesia</td>
-              </tr>
-              <tr>
-                <th>Hari jadi</th>
-                <td>25 September 1810</td>
-              </tr>
-              <tr>
-                <th>Luas Total</th>
-                <td>167.67 km<sup>2</sup></td>
-              </tr>
-              <tr>
-                <th>Bahasa Daerah</th>
-                <td>Sunda</td>
-              </tr>
-              <tr>
-                <th>Kode Telepon</th>
-                <td>+62 22</td>
-              </tr>
+              <tbody>
+                <tr>
+                  <th>Nama</th>
+                  <td>Musyaffa Arwiin</td>
+                </tr>
+                <tr>
+                  <th>Umur</th>
+                  <td>21 Tahun</td>
+                </tr>
+                <tr>
+                  <th>Posisi</th>
+                  <td>Front-End Developer</td>
+                </tr>
+              </tbody>
             </table>
           </section>
+
+          <!-- Social Media Icons -->
+          <div class="social-icons">
+            <a
+              href="https://www.linkedin.com/in/musyaffa-arwin-a99b94312/"
+              target="_blank"
+              class="icon linkedin"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a
+              href="https://github.com/Musyaffaa2"
+              target="_blank"
+              class="icon github"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/yaaffaaa_"
+              target="_blank"
+              class="icon instagram"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
         </article>
       </aside>
-
-      <script src="/js/script.js"></script>
-</body>
+    </main>
+    <footer>
+      <p>
+        Belajar Dasar Pemrograman Web &#169; 2025, Musyaffa Arwiin Cohort DBS Foundation CodingCamp
+      </p>
+    </footer>
+    <script src="/js/script.js"></script>
+  </body>
 </html>
