@@ -22,101 +22,106 @@
         <h1>Front-End Developer</h1>
         <p>
           "Front-End Development berfokus pada tampilan dan interaksi pengguna
-          menggunakan HTML, CSS, dan JavaScript untuk menciptakan antarmuka yang
-          responsif dan menarik."
+          menggunakan HTML, CSS, dan JavaScript."
         </p>
       </div>
       <nav class="navbar">
-        <ul class="nav-links">
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+          ☰
+        </button>
+        <ul class="nav-links" id="navLinks">
           <li><a href="#pendidikan">Pendidikan</a></li>
           <li><a href="#keahlian">Keahlian</a></li>
           <li><a href="#aboutme">Tentang Saya</a></li>
-          <li><a href="#teknologi">Teknologi Front-End</a></li>
+          <li><a href="#teknologi">Teknologi</a></li>
         </ul>
-        <button class="toggle-mode" id="darkModeToggle">🌙</button>
+        <button
+          class="toggle-mode"
+          id="darkModeToggle"
+          aria-label="Toggle dark mode"
+        >
+          🌙
+        </button>
       </nav>
     </header>
+
     <main>
       <div id="content">
         <article id="pendidikan" class="card">
           <h2>Pendidikan</h2>
           <img
-            src="assets/img/ub.jpeg"
-            alt="Universitas Brawijaya"
+            src="assets/img/ub.jpg"
+            alt="Kampus Universitas Brawijaya"
             class="featured-image"
+            loading="lazy"
           />
           <p>
             Saya adalah mahasiswa semester 6 Teknologi Informasi di Universitas
-            Brawijaya. Dalam perjalanan akademik saya, saya telah mempelajari
-            berbagai aspek pengembangan perangkat lunak, dengan fokus utama pada
-            pengembangan Front-End. Pemahaman tentang HTML, CSS, dan JavaScript
-            menjadi dasar dalam membangun antarmuka yang menarik dan interaktif
-            bagi pengguna.
+            Brawijaya. Saya fokus pada pengembangan Front-End, dengan
+            keterampilan utama di HTML, CSS, dan JavaScript untuk membangun
+            antarmuka pengguna yang interaktif.
           </p>
         </article>
 
         <article id="keahlian" class="card">
           <h2>Keahlian</h2>
           <img
-            src="assets/img/css.png"
-            alt="Keahlian dalam CSS"
+            src="assets/img/bahasa.jpg"
+            alt="Keahlian dalam teknologi Front-End"
             class="featured-image"
+            loading="lazy"
           />
           <p>
             Saya memiliki keahlian dalam pengembangan web menggunakan HTML, CSS,
-            dan JavaScript. Dengan CSS, saya dapat menciptakan desain yang
-            responsif dan estetis, sementara JavaScript membantu saya
-            menghadirkan fitur dinamis dan interaktif. Saya juga terus
-            mengembangkan kemampuan saya dalam menggunakan framework seperti
-            React dan Tailwind CSS untuk meningkatkan efisiensi dalam membangun
-            UI/UX yang modern.
+            dan JavaScript. Saya juga terbiasa menggunakan framework seperti
+            React.js dan Tailwind CSS untuk menciptakan antarmuka yang responsif
+            dan optimal.
           </p>
         </article>
 
         <article id="aboutme" class="card">
           <h2>Tentang Saya</h2>
           <img
-            src="assets/img/aboutme.jpeg"
-            alt="Tentang Saya"
+            src="assets/img/about_me.jpg"
+            alt="Foto saya"
             class="featured-image"
+            loading="lazy"
           />
           <p>
-            Saya bercita-cita menjadi seorang Full-Stack Developer dengan fokus
-            utama pada Front-End Development. Saya tertarik dalam menciptakan
-            pengalaman pengguna yang optimal melalui desain yang intuitif dan
-            fungsional. Selain itu, saya senang mengikuti perkembangan teknologi
-            web untuk terus meningkatkan keterampilan saya dalam membangun
-            antarmuka yang inovatif. Dunia pengembangan Front-End terus
-            berkembang dengan hadirnya berbagai teknologi seperti React, Vue,
-            dan Tailwind CSS. Framework ini memungkinkan pengembang untuk
-            membangun aplikasi web yang lebih cepat, efisien, dan ramah
-            pengguna. Dengan pendekatan komponen, pengelolaan UI menjadi lebih
-            fleksibel dan terstruktur, membantu dalam menciptakan pengalaman
-            pengguna yang lebih baik.
+            Saya bercita-cita menjadi Full-Stack Developer dengan fokus utama
+            pada Front-End. Saya senang mengeksplorasi teknologi terbaru seperti
+            React, Vue, dan Tailwind CSS untuk menciptakan pengalaman pengguna
+            yang lebih baik.
           </p>
         </article>
+
         <article id="teknologi" class="card">
           <h2>Teknologi Front-End</h2>
           <img
-            src="assets/img/teknologi.jpeg"
-            alt="teknologi"
+            src="assets/img/uiux.png"
+            alt="Teknologi yang digunakan dalam pengembangan Front-End"
             class="featured-image"
+            loading="lazy"
           />
           <p>
-            Dunia pengembangan Front-End terus berkembang dengan hadirnya
-            berbagai teknologi seperti React, Vue, dan Tailwind CSS. Framework
-            ini memungkinkan pengembang untuk membangun aplikasi web yang lebih
-            cepat, efisien, dan ramah pengguna. Dengan pendekatan komponen,
-            pengelolaan UI menjadi lebih fleksibel dan terstruktur, membantu
-            dalam menciptakan pengalaman pengguna yang lebih baik.
+            Dengan mengandalkan teknologi Tailwind CSS, saya menciptakan
+            aplikasi yang tidak hanya modern, efisien, dan responsif, tetapi
+            juga memiliki desain yang bersih dan adaptif. Pendekatan ini
+            memungkinkan saya menghasilkan antarmuka yang intuitif, memberikan
+            pengalaman pengguna yang optimal dan menyenangkan.
           </p>
         </article>
       </div>
+
       <aside>
         <article class="profile card">
           <h2>Profil</h2>
           <figure class="profile-image">
-            <img src="assets/img/prof.png" alt="Foto Profil" loading="lazy" />
+            <img
+              src="assets/img/prof.png"
+              alt="Foto Profil Musyaffa Arwiin"
+              loading="lazy"
+            />
           </figure>
           <section>
             <h3>Detail Informasi</h3>
@@ -142,27 +147,32 @@
               href="https://www.linkedin.com/in/musyaffa-arwin-a99b94312/"
               target="_blank"
               class="icon linkedin"
+              aria-label="LinkedIn"
               ><i class="fab fa-linkedin"></i
             ></a>
             <a
               href="https://github.com/Musyaffaa2"
               target="_blank"
               class="icon github"
+              aria-label="GitHub"
               ><i class="fab fa-github"></i
             ></a>
             <a
               href="https://www.instagram.com/yaaffaaa_/"
               target="_blank"
               class="icon instagram"
+              aria-label="Instagram"
               ><i class="fab fa-instagram"></i
             ></a>
           </div>
         </article>
       </aside>
     </main>
+    <button id="backToTop" title="Kembali ke atas">↑</button>
     <footer>
       <p>&#169; 2025, Musyaffa Arwiin | DBS Foundation CodingCamp Cohort</p>
     </footer>
-    <script src="/js/script.js"></script>
+
+    <script src="/js/script.js" defer></script>
   </body>
 </html>
